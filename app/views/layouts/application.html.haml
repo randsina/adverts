@@ -1,0 +1,15 @@
+!!!
+%html
+  %head
+    %title Adverts
+    = stylesheet_link_tag    'application', media: 'all', data: { turbolinks_track: true }
+    = javascript_include_tag 'application', data: { turbolinks_track: true }
+    = csrf_meta_tags
+  %body
+    .navbar.navbar-inverse{ role: 'navigation' }
+      .container
+        = link_to 'Adverts', root_path, class: 'navbar-brand' 
+        %ul.nav.navbar-nav
+          %li= link_to 'Link1', '#'
+          %li= link_to 'Link2', '#'
+    .container= yield
